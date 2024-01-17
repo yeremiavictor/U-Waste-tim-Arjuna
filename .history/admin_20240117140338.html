@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database-compat.js"></script>
+
+<!-- Konfigurasi Firebase -->
+<script>
+ const firebaseConfig = {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+</script>
+
+</head>
+<body>
+  <div id="data-container"></div>
+
+  <script>
+    function fetchData() {
+      var dataContainer = document.getElementById('data-container');
+      database.ref('/uwaste').once('value').then(function(snapshot) {
+        // Loop
+        snapshot.forEach(function(childSnapshot) {
+          var data = childSnapshot.val();
+          // Tambahkan elemen HTML sesuai kebutuhan Anda
+          var dataElement = document.createElement('div');
+          dataElement.innerHTML = '<p>' + data.name + ': ' + data.delivery + '</p>'; //nama database nya
+          dataContainer.appendChild(dataElement);
+        });
+      });
+    }
+
+    fetchData();
+  </script>
+</body>
+</html>

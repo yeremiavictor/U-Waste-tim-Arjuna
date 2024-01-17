@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <link rel="icon" href="logo.png" type="image/png" sizes="16x16">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sell.js">
+    <title>U-Waste by Arjuna</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logouwastenobg.png" width="80" height="100">
+                </a>
+            </div>
+        </div>
+
+            <ul class="menu">
+                <li><b href="#Sell">Sell</b></li>
+                <li><a href="index.html">Back</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="Buy">
+        <div class="containerform">
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name here" required>
+        
+                <label for="waste-type">Type of Waste:</label>
+                    <select id="waste-type" name="waste-type" required>
+                        <option value="paper">Paper</option>
+                        <option value="plastik">Plastic</option>
+                        <option value="metal">Metal</option>
+                        <option value="glass">Glass</option>
+                    </select>
+        
+                <label for="pickup-address">Pick-Up Address:</label>
+                    <input type="text" id="pickup-address" name="pickup-address" placeholder="Enter your pick-up address here" required>
+        
+                <label for="pickup-date">Pick-Up Date (10AM-16PM):</label>
+                    <input type="datetime-local" id="pickup-date" name="pickup-date" placeholder="Enter your address here" required>
+        
+                <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number here" required>
+        
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+<footer2>
+    <p>&copy; 2024 U-Waste | All rights reserved.</p>
+</footer2>
+</body>
+</html>
